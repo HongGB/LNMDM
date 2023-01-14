@@ -1,0 +1,9 @@
+BATCH_SIZE = 16
+INPUT_SIZE = (1024, 1024)  # (w, h)
+TARGET_SIZE = [768, 1280]
+LR = 0.01
+WD = 0.0005
+SAVE_FREQ = 1
+resume = ''
+test_model = 'model.ckpt'
+save_dir = './models/'
