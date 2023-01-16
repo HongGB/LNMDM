@@ -1,6 +1,8 @@
 # LNMDM Algorithm 
 
 ## Introduction
+Aimed at assisting pathologists in the identification of metastatic tumor cells in lymph nodes removed after radical cystectomy, we developed a supervised learning model called the lymph node metastases diagnostic model (LNMDM). 6,375 images are used for training and internal validation of the model, and 1,616 images are used for external testing. Based on the convolutional neural network HRNet-w18 architecture, LNMDM is trained in whole-slide pathological images (WSIs) with pixel-level labels, in order to provide heatmaps and slide-level predictions of WSIs. Firstly, the masks of WSIs are obtained based on the pixel-level annotations of the training data. Secondly, patches are randomly cropped in the annotated regions of WSIs, and the prediction images which are obtained by sliding convolution of the convolution kernels are upsampled and input into the sigmoid function to form the prediction probability of each pixel. Finally, the annotated masks are combined with the binary cross-entropy loss function to obtain the slide-level predictions and heatmaps.
+
 
 ## Requirements
 
